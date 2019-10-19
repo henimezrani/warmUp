@@ -18,6 +18,7 @@ function findGCD(number1, number2, divisor){
 
 
 // 2-Write a function called sum that accepts two numbers as parameters, and sum them together but without suming them togther directly
+
 //you can only add one at each summetion, you'll need to use recursion in this.
 
 function sum(number1, number2){
@@ -31,3 +32,6 @@ function sum(number1, number2){
 
 
 divisor(32,17)
+
+//you can only add one at each summetion, you'll need to use recursion in this.
+
