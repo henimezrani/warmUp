@@ -1,0 +1,39 @@
+body {
+	background-color: blue;
+}
+
+img {
+	width: 33%;
+}
+
+button {
+	text-decoration: none;
+	background-color: #DF1A34  ;
+	padding: 10px 30px;
+	border: solid .5px ;
+	border-radius: 10px;
+	color: white;
+}
+
+button:hover {
+	background-color: #DF1AAA  ;
+}
+
+#button1 {
+	font-family: sans-serif;
+}
+
+#button2 {
+	font-family: monospace;
+}
+
+li, a {
+	color: orange;
+}
+
+footer {
+	position: fixed;
+	right: 10px;
+	bottom: 0;
+	text-align: left
+}
