@@ -1,0 +1,18 @@
+button {
+	border-radius: 5px;
+	color:  #b71c1c;
+	border: 2px solid #b71c1c;
+	background-color: transparent;
+}
+
+h1 {
+	color: #b71c1c;
+}
+
+.class1 {
+	color: #b71c1c;
+}
+
+.class2 {
+	color: blue;
+}
