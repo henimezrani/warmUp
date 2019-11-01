@@ -14,7 +14,7 @@ Output
     mysteryRange(inputString,10) // [6,15]
 
         -The 10 numbers in this string are:
-        -15 6 8 14 12 9 11 10 13 7
+        -15 6 8 14 12 9 11 10 13 7 2 
         -Therefore the range of numbers is from 6 to 15
 
 Technical Details
@@ -69,7 +69,7 @@ function smallestLargest (str, size) {
             }
             otherCount++
             if (otherCount === 10) {
-                mostRepetedCharacter = (mostRepetedCharacter.parseInt()+1).toString()
+                mostRepetedCharacter = (parseInt(mostRepetedCharacter,10)+1).toString()
                 otherCount = 0
             }
         }
@@ -97,7 +97,7 @@ function smallestLargest (str, size) {
         }
         otherCount++
         if (otherCount === 10) {
-            mostRepetedCharacter = (mostRepetedCharacter.parseInt()+1).toString()
+            mostRepetedCharacter = (parseInt(mostRepetedCharacter,10)+1).toString()
             otherCount = 0
         }
     }

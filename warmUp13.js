@@ -31,3 +31,72 @@
             filter_list([1,'a','b',0,15]) == [1,0,15]
             filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 */
+
+
+// A - 1
+
+function romanNumeral(str) {
+    var acc = 0;
+    var tmp = 0;
+    var numerals = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000,
+    }
+
+    for (var i = 0; i < str.length; i++) {
+        if (numerals[str[i]] > numerals[str[i+1]]){
+            acc += numerals[str[i]];
+            if (numerals[str[i]] === numerals[str[i-1]]){
+                acc += tmp;
+            } else {
+                acc -= tmp;
+            }
+            tmp = 0
+        } else if (numerals[str[i]] < numerals[str[i+1]]){
+            tmp += numerals[str[i]]
+        } else if (numerals[str[i]] === numerals[str[i+1]]){
+            tmp += numerals[str[i]]
+        } else {
+            if (numerals[str[i]] === numerals[str[i-1]]){
+                acc += numerals[str[i]] + tmp;
+            } else {
+                acc += numerals[str[i]] - tmp;
+            }
+        }
+        
+    }
+    return acc;
+}
+
+// A - 2
+
+function toCamelCase(str) {
+    var regEx = /-|_/
+    var input = str.split(regEx)
+    for (var i = 1; i < input.length; i++) {
+        input[i] = input[i][0].toUpperCase() + input[i].slice(1)
+    }
+    return input.join('')
+}
+
+// A - 3
+
+function filterStr (array) {
+    var result = []
+    for (var i = 0; i < array.length; i++) {
+        if (typeof array[i] !== "string"){
+            for (var j = 0; j < result.length; j++) {
+                if (array[i] === result[j]){
+                    break;
+                }
+            }
+            result.push(array[i])
+        }
+    }
+    return result
+}
