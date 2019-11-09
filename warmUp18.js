@@ -11,6 +11,7 @@
 // input   =  "aaaaaaaaaaaa"
 // result  =  "123456789101112"
 
+
 function countChars(string) {
 	var tmpobj = {}
 	var result = ""
