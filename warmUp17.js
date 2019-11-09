@@ -26,7 +26,13 @@
 // word[i] is an English lowercase letter.
 
 // ​
-// ​
-// var calculateTime = function(keyboard, word) {
-    
-// };
+var calculateTime = function(keyboard, word) {
+	var currentIndex = 0;
+	var acc = 0;
+	for (var i = 0 ; i < word.length ; i++) {
+		var nextIndex = keyboard.indexOf(word[i]);
+		acc += Math.abs(currentIndex - nextIndex)
+		currentIndex = nextIndex
+	}
+	return acc;
+};
